@@ -1,0 +1,47 @@
+MobileMenuItems=document.querySelector('#MobileMenuItems');
+menuBar=document.querySelector('#menuBar');
+
+menuBar.onclick=()=>{
+  menuBar.classList.toggle('fa-times')
+  MobileMenuItems.classList.toggle('MobileMenuActive')
+}
+
+var swiper = new Swiper(".Home_slider", {
+        loop:true,
+        autoplay:true,
+        fade:true,
+        autoplaySpeed: 1500,
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+});
+
+var swiper = new Swiper(".product_slider", {
+    loop:true,
+    autoplay:true,
+    slidesPerView: 1,
+    spaceBetween: 5,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
